@@ -9,3 +9,15 @@ let paintBtn = document.getElementById("paint-btn");
 let widthValue = document.getElementById("width-value");
 let heightValue = document.getElementById("height-value");
 
+let events = {
+    mouse: {
+        down: "mousedown",
+        move: "mousemove",
+        up: "mouseup"
+    },
+    touch: {
+        down: "touchstart",
+        mobe: "touchmove",
+        up: "touchend",
+    },
+};
