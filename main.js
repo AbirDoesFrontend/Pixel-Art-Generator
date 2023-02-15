@@ -21,3 +21,21 @@ let events = {
         up: "touchend",
     },
 };
+
+let deviceType = "";
+
+let draw = false;
+let erase = false;
+
+const isTouchDevice = () => {
+    try {
+        document.createEvent("TouchEvent");
+        deviceType = "touch";
+        return true;
+    } catch (e) {
+        deviceType = "mouse";
+        return false;
+    }
+};
+
+isTouchDevice();
